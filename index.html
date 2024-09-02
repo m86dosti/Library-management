@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <style>
+        body{
+            background-color: gray;
+            margin: 20px;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        #container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+        input{
+            border: none;
+            margin: 5px;
+            border-radius: 3px;
+            text-align: center;
+        }        
+        button{
+            margin: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(17, 17, 17);
+            color: rgb(180, 180, 180);
+            border: none;
+            border-radius: 6px;
+        }
+        button:active{
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Library Management System</h1>
+    <div id="container">
+    <input type="text" id="bookTitle" placeholder="Enter book title">
+    <button onclick="addBook()">Add Book</button>
+    </div>
+    <ul id="bookList"></ul>
+
+    <script>
+        function addBook() {
+            const title = document.getElementById('bookTitle').value;
+            const li = document.createElement('li');
+            li.textContent = title;
+            document.getElementById('bookList').appendChild(li);
+            document.getElementById('bookTitle').value = '';
+        }
+    </script>
+</body>
+</html>
