@@ -56,13 +56,16 @@
     <ul id="bookList"></ul>
 
     <script>
-        function addBook() {
+        
+        function addBook()
+        {
             const title = document.getElementById('bookTitle').value;
             const li = document.createElement('li');
             li.textContent = title;
             document.getElementById('bookList').appendChild(li);
             document.getElementById('bookTitle').value = '';
         }
+        
     </script>
 </body>
 </html>
